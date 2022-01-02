@@ -4,6 +4,13 @@ module.exports = {
     exclude: ['node_modules', '.git', 'dist', 'build'],
   },
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        blue: {
+          solid: '#466FA4',
+          footer: '#324253',
+        },
+      },
+    },
   },
 }
