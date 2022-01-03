@@ -66,7 +66,7 @@ const Wrapper = (props: JSX.HTMLAttributes<HTMLElement>) => {
 
 
   return (
-    <div class='flex-1 flex'>
+    <div class='flex-1 grid' style={{ 'grid-template-columns': '300px 1fr 300px' }}>
       <nav class='w-75 capitalize p-2'>
         <List list={list} url={url} />
       </nav>

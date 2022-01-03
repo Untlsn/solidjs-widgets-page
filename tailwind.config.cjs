@@ -15,6 +15,9 @@ module.exports = {
         },
         select: {
           gray: '#f8f4f4'
+        },
+        code: {
+          dark: '#302c3c'
         }
       },
     },
