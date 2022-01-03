@@ -22,7 +22,7 @@ const Header = () => {
           <Icon class="inline-block text-2xl"/>
           <span class="font-bold pl-2">SolidJs Widgets</span>
         </a>
-        <a class="flex-1 font-semibold" href="/docs">
+        <a class="flex-1 font-semibold" href="/docs/getting-started">
           Docs
         </a>
         <GitHub/>

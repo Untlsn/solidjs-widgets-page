@@ -2,8 +2,10 @@ import { hydrate, render } from 'solid-js/web';
 import { useClientRouter } from 'vite-plugin-ssr/client/router';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
+import './root.css';
 import Header from '$/components/organisms/Header';
 import Footer from '$/components/organisms/Footer';
+import { UrlContext } from '$/context/url';
 
 
 let dispose: () => void;
@@ -18,9 +20,11 @@ const { hydrationPromise } = useClientRouter({
 
     const FullPage = () => (
       <div class="min-h-screen flex flex-col">
-        <Header/>
-        <Page {...pageProps} />
-        <Footer/>
+        <UrlContext.Provider value={pageContext.url}>
+          <Header/>
+          <Page {...pageProps} />
+          <Footer/>
+        </UrlContext.Provider>
       </div>
     );
 
