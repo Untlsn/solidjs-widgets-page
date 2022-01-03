@@ -2,12 +2,12 @@ import { highlight, languages } from 'prismjs';
 import { createMemo } from 'solid-js';
 import "prismjs/themes/prism-tomorrow.css";
 
-const Code = (props: { copy: string, lang?: string }) => {
+const Code = (props: { copy: string, lang?: string, class?: string }) => {
   const lang = createMemo(() => props.lang || 'jsx');
 
   return (
     <pre
-      class='bg-code-dark py-4 px-8 mt-4 rounded-lg tracking-wide group relative'
+      class={`bg-code-dark py-4 px-8 mt-4 rounded-lg tracking-wide group relative ${props.class || ''}`}
       style={{ 'word-spacing': '.2em' }}
     >
       <code

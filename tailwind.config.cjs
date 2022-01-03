@@ -1,6 +1,6 @@
 module.exports = {
   extract: {
-    include: ['**/*.{jsx,tsx,html,css}'],
+    include: ['**/*.{jsx,tsx,html,css,module.css}'],
     exclude: ['node_modules', '.git', 'dist', 'build'],
   },
   theme: {
